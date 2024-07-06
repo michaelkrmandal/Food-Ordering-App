@@ -1,0 +1,17 @@
+/* RestaurantListing */
+.card-img-hover {
+  transition: transform 0.3s;
+}
+
+.card-img-hover:hover {
+  transform: scale(1.05);
+}
+
+.text-decorate {
+  text-decoration: none;
+  color: black;
+}
+
+.text-decorate:hover {
+  text-decoration: none;
+}
