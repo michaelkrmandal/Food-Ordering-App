@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card, Button, Form } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Img1 from "../assets/Images/restaurant1.jpg";
 import Img2 from "../assets/Images/restaurant2.jpg";
 import Img3 from "../assets/Images/restaurant3.jpg";

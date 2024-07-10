@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { CartContext } from './CartContext';
 import './style.css';
 import Food1 from '../assets/Images/food1.jpeg'
 import Food2 from '../assets/Images/food2.jpeg'
@@ -15,6 +16,13 @@ import Food11 from '../assets/Images/food11.jpeg'
 import Food12 from '../assets/Images/food2.jpeg'
 
 const MenuFeature = () => {
+  const { addToCart } = useContext(CartContext);
+   
+  const handleAddToCart = (dish) => {
+    addToCart({...dish});
+ };
+
+
   const dishes = [
     { id: 1, name: 'Dish A', description: 'Short description of the dish.', price: '$12.99', image: Food1 },
     { id: 2, name: 'Dish B', description: 'Short description of the dish.', price: '$10.99', image: Food2 },
@@ -45,7 +53,7 @@ const MenuFeature = () => {
                 <Card.Title>{dish.name}</Card.Title>
                 <Card.Text>{dish.description}</Card.Text>
                 <Card.Text>Price: {dish.price}</Card.Text>
-                <Button variant="warning"><a href="#" className="text-decorate">Book Now</a></Button>
+                <Button variant="warning" className="text-decorate" onClick={() => handleAddToCart(dish)}>Book Now</Button>
                 </div>
               </Card.Body>
             </Card>
